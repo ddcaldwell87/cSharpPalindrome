@@ -10,6 +10,26 @@ namespace Palindrome
     {
         static void Main(string[] args)
         {
+            bool Palindrome(string check)
+            {
+                string parsed = check.Replace(" ", "").ToLower();
+                char[] word = parsed.ToCharArray();
+                var reversed = word.Reverse();
+                var joined = String.Join("", reversed);
+                
+                if (parsed == joined)
+                {
+                    Console.WriteLine("true");
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("false");
+                    return false;
+                }
+            }
+            Palindrome("ufo tofu");
+            Console.Read();
         }
     }
 }
